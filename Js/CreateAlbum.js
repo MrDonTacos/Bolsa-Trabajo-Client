@@ -3,7 +3,6 @@ let viewModel = null;
 
 $(document).ready(()=>{
     init();
-    
 });
 
     const init = () => {
@@ -15,14 +14,15 @@ $(document).ready(()=>{
             price: ko.observable(0).extend({numeric: 2}),
             Image : ko.observable(""),
             ReleaseDate : ko.observable(new Date()),
+            Time : ko.observable(""),
             Genre : ko.observable(""),
-            Musician : ko.observable(0),
-            
+            MusicianRefId : ko.observable(0)
         };
 
         viewModel.save = function (){
             let plainJs = ko.toJS(viewModel);
             plainJs.price = parseFloat(plainJs.price);
+            plainJs.MusicianRefId = parseInt(plainJs.MusicianRefId);
             let jsonData = JSON.stringify(plainJs);
             console.log(jsonData);
             save(jsonData).then(() => {
@@ -30,9 +30,9 @@ $(document).ready(()=>{
             });
         }
 
-        viewModel.musician = function(data){
-            viewModel.Musician(data);
-        }
+        //viewModel.musician = function(data){
+        //    viewModel.Musician(data);
+        //}
         ko.applyBindings(viewModel);
     };
 
