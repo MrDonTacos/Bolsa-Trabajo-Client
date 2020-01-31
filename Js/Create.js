@@ -1,4 +1,4 @@
-var url = 'http://localhost:5000/api/Tienda_Musica/'
+var url = 'http://localhost:5000/api/Tienda_Musica'
 let viewModel = null;
 let id = null;
 let album=null;
@@ -15,19 +15,18 @@ $(document).ready(() => {
             id : ko.observable(0),
             name: ko.observable(""),
             genre: ko.observable(""),
-            date: ko.observable(new Date()),
             image: ko.observable(""),
+            date: ko.observable(new Date()),
           
         };
         viewModel.save = function() {
             let plainJs = ko.toJS(viewModel);
             let jsonData = JSON.stringify(plainJs);
             console.log(jsonData);
-            console.log(plainJs);
             save(jsonData).then(() =>{
                 window.history.back();
             }).fail((err) =>{
-               console.log('Mala captura de dattos ', err);
+               console.log('Mala captura de datos ', err);
             });
         }
         ko.applyBindings(viewModel);

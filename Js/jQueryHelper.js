@@ -3,7 +3,7 @@ const query = (url, data, type) => {
         type: type != null ? type : "get",
         url: url,
         data: data,
-        dataType: 'json',
+        contentType: "application/json",
         crossDomain: true,
         headers: {
             "accept": "application/json",

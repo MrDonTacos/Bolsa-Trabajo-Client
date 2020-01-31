@@ -17,27 +17,30 @@
     <form>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputName">Name</label>
-            <input type="text" class="form-control" data-bind="value: name" id="inputEmail4">
+            <label for="inputName">Titulo</label>
+            <input type="text" class="form-control" data-bind="value: Title" id="inputEmail4">
           </div>
           <div class="form-group col-md-6">
             <label for="inputGenre">Genre</label>
-            <input type="text" class="form-control" data-bind="value: genre" id="inputPassword4">
+            <input type="text" class="form-control" data-bind="value: Genre" id="inputPassword4">
           </div>
         </div>
         <div class="form-group">
           <label for="inputAddress">Image Link</label>
-          <input type="text" class="form-control" id="inputAddress" data-bind="value: image" placeholder="">
+          <input type="text" class="form-control" id="" data-bind="value: Image" placeholder="">
         </div>
         <div class="form-group">
-          <label for="inputCreation">Band creation date</label>
-          <input type="date" class="form-control" id="inputAddress2" data-bind="value: date" placeholder="">
+          <label for="inputAddress">Release Date</label>
+          <input type="date" class="form-control" id="inputAddress" data-bind="value: ReleaseDate" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="inputCreation">Clave del artista</label>
+          <input type="number" class="form-control" id="inputAddress2" data-bind="value: Musician" placeholder="">
         </div>
     </div>
         <button type="submit" class="btn btn-primary" data-bind="click:save">Sign in</button>
       </form>
 </body>
 
-<script src="Js/Create.js"></script>
+<script src="Js/CreateAlbum.js"></script>
 </html>
-
