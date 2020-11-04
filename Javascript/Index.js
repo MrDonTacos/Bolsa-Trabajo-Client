@@ -1,4 +1,3 @@
-const url = 'http://localhost:5000/api/Tienda_Musica/'
 let viewModel = null;
 $(document).ready(() => {
 //     cargarArtistas();
@@ -32,34 +31,21 @@ $("#teloficina").kendoComboBox({
     dataValueField: "id_curso"
 })
 
-$("#teloficina").kendoComboBox({
-    dataSource: dataSourceEmpleadoCurso,
-    dataTextField: "nom_curso",
-    dataValueField: "id_curso"
+$("#DD_Sexo").kendoDropDownList({
+    dataTextField: "text",
+    dataValueFiedl: "v",
+    dataSource: [
+        {text: "HOMBRE", value: 1},
+        {text: "MUJER", value: 2}
+    ]
 })
 
-$("#teloficina").kendoComboBox({
-    dataSource: dataSourceEmpleadoCurso,
-    dataTextField: "nom_curso",
-    dataValueField: "id_curso"
+$("#DT_FNacimiento").kendoDatePicker({
+   format: "dd-MM-yyyy"
 })
 
-$("#teloficina").kendoComboBox({
-    dataSource: dataSourceEmpleadoCurso,
-    dataTextField: "nom_curso",
-    dataValueField: "id_curso"
-})
-
-$("#teloficina").kendoComboBox({
-    dataSource: dataSourceEmpleadoCurso,
-    dataTextField: "nom_curso",
-    dataValueField: "id_curso"
-})
-
-$("#teloficina").kendoComboBox({
-    dataSource: dataSourceEmpleadoCurso,
-    dataTextField: "nom_curso",
-    dataValueField: "id_curso"
+$("#DT_FechaIngreso").kendoDatePicker({
+    format: "dd-MM-yyyy"
 })
 });
 
