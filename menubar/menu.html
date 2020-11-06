@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<title>Inicio</title>
 	<link rel="stylesheet" href="styles.css">
@@ -12,7 +13,20 @@
 			   $(".wrapper").toggleClass("collapse");
 			});
 		});
-	</script>
+  </script>
+  <script
+	    src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+<script src="Js/jQueryHelper.js"></script>
+<!-- <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js'></script> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="Styles/style.css">
+<link href="styles/kendo.default-v2.min.css" rel="stylesheet" />
+<link href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.common.min.css" rel="stylesheet" />
+<link href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.default.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2020.3.1021/js/kendo.all.min.js"></script>
 </head>
 <body>
 
@@ -87,20 +101,123 @@
   </div>
   
   <div class="main_container">
-    <div class="item">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
-    </div>
-    <div class="item">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
-    </div>
-    <div class="item">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
-    </div>
-    <div class="item">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
-    </div>
+    <div style="padding-left: 5%; padding-right: 5%;" class="col col-sm-12 col-md-12 col-lg-12 container-fluid">    
+      <div class="panel">
+          <div class="panel-heading" style="text-align: center;">
+              <h4 class="panel-title" style="font-weight:100">Instituto Tecnológico de Mexicali</h4>
+              <h4 class="panel-title"  style="font-weight:100">Bolsa de trabajo</h4>
+              <h4 class="panel-title" style="font-weight:100">Mantenimiento Bolsa</h4>
+          </div>
+          <div class="panel-body" style="margin-top:2%">
+              <form>
+                  <div class="form-group row">
+                      <label for="NoControl">Número de control</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-2">
+                          <input id="NoControl" class="k-textbox" style="width:100%" data-bind="value: Entity.NoControl">
+                      </div>
+                      <label for="APaterno">A. Paterno</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-1">
+                          <input id="APaterno" class="k-textbox" style="width:100%" data-bind="value: Entity.APaterno">
+                      </div>
+                      <label for="AMaterno">A. Materno</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-1">
+                          <input id="AMaterno" class="k-textbox" style="width:100%" data-bind="value: Entity.AMaterno">
+                      </div>
+                      <label for="Nombre">Nombre</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-1">
+                          <input id="Nombre" class="k-textbox" style="width:100%" data-bind="value: Entity.Nombre">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="DD_Sexo">Sexo</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-1">
+                          <input id="DD_Sexo" style="width:100%" data-bind="value: Entity.Sexo">
+                      </div>
+                      <label for="DT_FNacimiento">Fecha de Nacimiento</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-2">
+                          <input id="DT_FNacimiento" style="width:100%" data-bind="value: Entity.FechaNacimiento">
+                      </div>
+                      <label for="Direccion">Direccion</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-3">
+                          <input id="Direccion" class="k-textbox" style="width:100%" data-bind="value: Entity.Direccion">
+                      </div>
+                      <label for="Teléfono">Teléfono</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-1">
+                          <input id="Teléfono" class="k-textbox" style="width:100%" data-bind="value: Entity.Teléfono">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="DT_FechaIngreso">Fecha de Ingreso</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-2">
+                          <input id="DT_FechaIngreso" style="width:100%" data-bind="value: Entity.FechaIngreso">
+                      </div>
+                      <label for="DD_Nacionalidad">Nacionalidad</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-2">
+                          <input id="DD_Nacionalidad" style="width:100%" data-bind="value: Entity.Nacionalidad">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                      <label for="DD_Perfil">Perfil</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-2">
+                          <input id="DD_Perfil" style="width:100%" data-bind="value: Entity.Perfil">
+                      </div>
+                      <label for="DD_Experiencia">Experiencia</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-1">
+                          <input id="DD_Experiencia" style="width:100%" data-bind="value: Entity.Experiencia">
+                      </div>
+                      <label for="DD_Escolaridad">Escolaridad</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-1">
+                          <input id="DD_Escolaridad" style="width:100%" data-bind="value: Entity.Escolaridad">
+                      </div>
+                      <label for="CURP" >CURP</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-2">
+                          <input id="CURP" class="k-textbox" style="width:100%" data-bind="value: Entity.CURP">
+                      </div>
+                  </div>
+              </form>
+              <div class="form-group row">
+                  <label for="DD_Documento1">Documento</label>
+                  <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <input id="DD_Documento1" style="width:100%" data-bind="value: Entity.Documento1">
+                  </div>
+                  <label for="TB_NormalesS">Estatus</label>
+                  <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <input id="DD_Estatus" style="width:100%" data-bind="value: Entity.Estatus">
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label for="DD_Documento2">Documento</label>
+                  <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <input id="DD_Documento2" style="width:100%" data-bind="value: Entity.Documento2">
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label for="DD_Documento3">Documento</label>
+                  <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <input id="DD_Documento3"  style="width:100%" data-bind="value: Entity.Documento3">
+                  </div>
+                  <label for="Observaciones" >Observaciones</label>
+                  <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <textarea id="Observaciones" class="k-textbox" style="width:100%" data-bind="value: Entity.Observaciones"></textarea>
+                  </div>
+              </div>
+              <!-- END PANEL DEFAULT -->
+          </div>
+      </div>
+  </div>
   </div>
 </div>
-	
+
 </body>
+<script src="./Javascript/dsKendo/dsDepartamento.js"></script>
+<script src="./Javascript/dsKendo/dsEmpleado.js"></script>
+<script src="./Javascript/dsKendo/dsEmpleadoCurso.js"></script>
+<script src="./Javascript/dsKendo/dsEscolaridad.js"></script>
+<script src="./Javascript/dsKendo/dsMateria.js"></script>
+<script src="./Javascript/dsKendo/dsPuesto.js"></script>
+<script src="./Javascript/dsKendo/dsDocumento.js"></script>
+<script src="./Javascript/dsKendo/dsNacionalidad.js"></script>
+<script src="./Javascript/dsKendo/dsPerfil.js"></script>
+<script src="./Javascript/dsKendo/helper.js"></script>
+<script src="./Javascript/Index.js"></script>
 </html>
