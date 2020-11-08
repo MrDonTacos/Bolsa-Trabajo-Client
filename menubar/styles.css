@@ -14,9 +14,10 @@ body{
 .wrapper{
   margin: 10px;
 }
-.primeraSeccion{
+.seccion{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .quintaSeccion {/*Seccion de documento junto con estatus*/
