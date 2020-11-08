@@ -20,11 +20,37 @@ body{
   flex-wrap: wrap;
 }
 
-.quintaSeccion {/*Seccion de documento junto con estatus*/
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.sextaSeccion input{
+  margin: .5em;
 }
+
+.panel-body{
+  margin-top:1%;
+}
+
+.panel-body .seccion{
+  margin: 25px;
+}
+
+input {
+  box-sizing: border-box;
+  padding:10px;
+  border: 0.8px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.2);
+  border-radius:15px;
+}
+
+
+
+textarea {
+  box-sizing: border-box;
+  padding:10px;
+  border: 0.8px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.2);
+  border-radius:15px;
+}
+
+
 .sextaSeccion{
   display: flex;
   flex-direction: column;
