@@ -139,7 +139,7 @@ textarea {
   top: 70px;
   left: 10px;
   background: #2e4ead;
-  width: 260px;
+  width: 300px;
   height: calc(100% - 80px);
   border-bottom-left-radius: 20px;
   transition: all 0.3s ease;
