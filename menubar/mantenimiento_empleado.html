@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Inicio</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+  </script>
+  <script
+	    src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+<script src="Js/jQueryHelper.js"></script>
+<!-- <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js'></script> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="Styles/style.css">
+<link href="styles/kendo.default-v2.min.css" rel="stylesheet" />
+<link href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.common.min.css" rel="stylesheet" />
+<link href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.default.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2020.3.1021/js/kendo.all.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo">BOLSA DE TRABAJO</div>
+      <ul>
+        <li><a href="#">
+          <i class="fas fa-search"></i></a></li>
+        <li><a href="#">
+          <i class="fas fa-bell"></i>
+          </a></li>
+        <li><a href="#">
+          <i class="fas fa-user"></i>
+          </a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sidebar">
+      <ul>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-cogs"></i></span>
+          <span class="title">Categoria</span></a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-tv"></i></span>
+          <span class="title">Cursos</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-building"></i></span>
+          <span class="title">Departamentos</span>
+          </a></li>
+        <li><a href="#" class="active">
+          <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+          <span class="title">Empleado Curso</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-id-card"></i></span>
+          <span class="title">Empleado Documento</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-id-card-alt"></i></span>
+          <span class="title">Escolaridad</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-briefcase"></i></span>
+          <span class="title">Experiencia</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="far fa-clock"></i></span>
+          <span class="title">Horario</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-male"></i></span>
+          <span class="title">Perfil</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-users"></i></span>
+          <span class="title">Puesto</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-folder-open"></i></span>
+          <span class="title">Mantenimiento de Empleado</span>
+          </a></li>
+        <li><a href="/menubar/menu.html">
+          <span class="icon"><i class="fas fa-folder-open"></i></span>
+          <span class="title">Mantenimiento Bolsa</span>
+        </a></li>
+    </ul>
+  </div>
+  
+  <div class="main_container">
+    <div style="padding-left: 5%; padding-right: 5%;" class="col col-sm-12 col-md-12 col-lg-12 container-fluid">    
+      <div class="panel">
+          <div class="panel-heading" style="text-align: center;">
+            <h4 class="panel-title" style="font-weight:100">Instituto Tecnológico de Mexicali</h4>
+            <h4 class="panel-title"  style="font-weight:100">Bolsa de trabajo</h4>
+            <h4 class="panel-title" style="font-weight:100">Mantenimiento Bolsa</h4>
+          </div>
+          <div class="panel-body">
+              <form>
+                <div class="seccion primera"><!--primera seccion-->
+                  <div id="control">
+                    <label for="NoControl">Número de control</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-2">
+                      <input id="id NoControl" style="width:200px" data-bind="value: Entity.NoControl">
+                    </div>
+                  </div>
+
+                  <div id="text paterno">
+                    <label for="APaterno">A. Paterno</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-1">
+                      <input id="APaterno" style="width:200px" data-bind="value: Entity.APaterno">
+                    </div>
+                  </div>
+
+                  <div id="text materno">
+                    <label for="AMaterno">A. Materno</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-1">
+                      <input id="AMaterno" style="width:200px" data-bind="value: Entity.AMaterno">
+                    </div>
+                  </div>
+
+                  <div id="text nombre">
+                    <label for="Nombre">Nombre</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-1">
+                      <input id="Nombre" style="width:200px" data-bind="value: Entity.Nombre">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="seccion segunda"><!--Segunda seccion-->
+                  <div id="text sexo">
+                    <label for="DD_Sexo">Sexo</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-1">
+                      <input id="DD_Sexo" style="width:200px" data-bind="value: Entity.Sexo">
+                    </div>
+                  </div>
+
+                  <div id="text fechaNacimiento">
+                      <label for="DT_FNacimiento">Fecha de Nacimiento</label>
+                      <div class="col col-sm-3 col-md-3 col-lg-2">
+                        <input id="DT_FNacimiento" style="width:200px" data-bind="value: Entity.FechaNacimiento">
+                      </div>
+                  </div>
+
+                  <div id="text direccion">
+                    <label for="Direccion">Direccion</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <input id="Direccion" style="width:200px" data-bind="value: Entity.Direccion">
+                    </div>
+                  </div>
+
+                  <div id="text telefono">
+                    <label for="Teléfono">Teléfono</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-1">
+                      <input id="Teléfono"  style="width:200px" data-bind="value: Entity.Teléfono">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="seccion tercera"><!--tercera seccion-->
+                  <div id="text ingreso"> 
+                    <label for="DT_FechaIngreso">Fecha de Ingreso</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-2">
+                      <input id="DT_FechaIngreso" style="width:200px" data-bind="value: Entity.FechaIngreso">
+                    </div>
+                  </div>
+
+                  <div id="text nacionalidad"> 
+                    <label for="DD_Nacionalidad">Nacionalidad</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-2">
+                      <input id="DD_Nacionalidad" style="width:200px" data-bind="value: Entity.Nacionalidad">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="seccion cuarta"><!--cuarta seccion-->
+                  <div id="text perfil">
+                    <label for="DD_Perfil">Perfil</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-2">
+                      <input id="DD_Perfil" style="width:200px" data-bind="value: Entity.Perfil">
+                    </div>
+                  </div>
+
+                  <div id="text experiencia">
+                    <label for="DD_Experiencia">Experiencia</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-1">
+                      <input id="DD_Experiencia" style="width:200px" data-bind="value: Entity.Experiencia">
+                    </div>
+                  </div>
+
+                  <div id="text escolaridad">
+                    <label for="DD_Escolaridad">Escolaridad</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-1">
+                      <input id="DD_Escolaridad" style="width:200px" data-bind="value: Entity.Escolaridad">
+                    </div>
+                  </div>
+
+                  <div id="text curp">
+                    <label for="CURP" >CURP</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-2">
+                      <input id="CURP" class="k-textbox" style="width:200px" data-bind="value: Entity.CURP">
+                    </div>
+                  </div>
+              </div>
+              </form>
+
+              <div class="seccion quinta"><!--quinta seccion--><!--MENU DOBLE-->
+                <div class="sextaSeccion">
+                  <div id=" text documento1">
+                    <label for="DD_Documento1">Documento</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <input id="DD_Documento1" style="width:200px" data-bind="value: Entity.Documento1">
+                    </div>
+                  </div>
+
+                  <div id="text documento2">
+                    <label for="DD_Documento2">Documento</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <input id="DD_Documento2" style="width:200px" data-bind="value: Entity.Documento2">
+                    </div>
+                  </div>
+
+                  <div id="text documento3">
+                    <label for="DD_Documento3">Documento</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <input id="DD_Documento3"  style="width:200px" data-bind="value: Entity.Documento3">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="septimaSeccion">
+                  <div id="text status">
+                    <label for="TB_NormalesS">Estatus</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <input id="DD_Estatus" style="width:200px" data-bind="value: Entity.Estatus">
+                    </div>
+                  </div>
+
+                  <div class="text observaciones">
+                    <label for="Observaciones" >Observaciones</label>
+                    <div class="col col-sm-3 col-md-3 col-lg-3">
+                      <textarea id="Observaciones" style="width:200px" data-bind="value: Entity.Observaciones"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- END PANEL DEFAULT -->
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+</body>
+<script src="./Javascript/dsKendo/dsDepartamento.js"></script>
+<script src="./Javascript/dsKendo/dsEmpleado.js"></script>
+<script src="./Javascript/dsKendo/dsEmpleadoCurso.js"></script>
+<script src="./Javascript/dsKendo/dsEscolaridad.js"></script>
+<script src="./Javascript/dsKendo/dsMateria.js"></script>
+<script src="./Javascript/dsKendo/dsPuesto.js"></script>
+<script src="./Javascript/dsKendo/dsDocumento.js"></script>
+<script src="./Javascript/dsKendo/dsNacionalidad.js"></script>
+<script src="./Javascript/dsKendo/dsPerfil.js"></script>
+<script src="./Javascript/dsKendo/helper.js"></script>
+<script src="./Javascript/Index.js"></script>
+</html>
