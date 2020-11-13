@@ -20,6 +20,10 @@ body{
   flex-wrap: wrap;
 }
 
+.cuarta input{
+  margin: .5em;
+}
+
 .sextaSeccion input{
   margin: .5em;
 }
