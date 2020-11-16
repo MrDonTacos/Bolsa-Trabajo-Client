@@ -86,8 +86,21 @@ $("#DD_Documento3").kendoComboBox({
     dataTextField: "documento",
     dataValueField: "id_documento"
 })
+$("#CC_Curso1").kendoComboBox({
+    dataSource: dataSourceCurso,
+   dataTextField: "nom_curso",
+   dataValueField: "id_curso"
+})
+$("#CC_Curso2").kendoComboBox({
+    dataSource: dataSourceCurso,
+   dataTextField: "nom_curso",
+   dataValueField: "id_curso"
+})
+$("#CC_Curso3").kendoComboBox({
+    dataSource: dataSourceCurso,
+   dataTextField: "nom_curso",
+   dataValueField: "id_curso"
+})
 });
-
-        
 
 
