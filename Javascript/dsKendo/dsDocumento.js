@@ -39,7 +39,7 @@ var dataSourceEmpleadoDocumento = new kendo.data.DataSource({
         }
     },
     error: function (e) {
-        debugger
+        //debugger
         console.log("error:" + e);
         alert(e.xhr.responseText + " error");
     }

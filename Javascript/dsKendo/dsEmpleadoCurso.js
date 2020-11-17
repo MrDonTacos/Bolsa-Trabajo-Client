@@ -39,7 +39,7 @@ var dataSourceEmpleadoCurso = new kendo.data.DataSource({
         }
     },
     error: function (e) {
-        debugger
+        //ger
         console.log("error:" + e);
         alert(e.xhr.responseText + " error");
     }
