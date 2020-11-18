@@ -34,6 +34,12 @@
 
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.js"></script>
+
+<!--QUIZAS NO SIRVEN, PERO POR SI LAS DUDAS-->
+<script src="alert/dist/sweetalert-dev.js"></script>
+<link rel="stylesheet" href="alert/dist/sweetalert.css">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> <!--SRC DE LOS ALERT-->
 </head>
 <body>
 
@@ -114,12 +120,12 @@
   <div class="main_container">
     <div class="login-page">
         <div class="form">
-          <form class="login-form" id="loginCurso">
+          <form class="login-form" id="loginCurso"><!--quite NAME que tenia el nombre de COSAS-->
               Clave
-            <input type="text" placeholder="Ingresa la Clave" id="cursoAutoCompleteClave" name="claveCurso"/>
+            <input type="text" placeholder="Ingresa la Clave" id="cursoAutoCompleteClave" name="claveCurso" maxlength="4"/>
             Curso
             <input type="text" placeholder="Ingresa curso" id="cursoAutoComplete" name="nombreCurso"/>
-            <button class="botonCurso" type="submit">Guardar</button>
+            <button class="btnPromt" type="submit">Guardar</button><!--hay un error aqui-->>
           </form>
         </div>
       </div>
@@ -128,6 +134,7 @@
 </div>
 
 </body>
+<script src="/utils/styleAlert_Alert.js"></script>
 <script src="/secciones/curso/POSTCurso.js"></script>
 <script src="/secciones/curso/curso.js"></script>
 <script src="/Javascript/dsKendo/helper.js"></script>
