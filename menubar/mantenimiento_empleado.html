@@ -27,6 +27,14 @@
 <link href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.default.min.css" rel="stylesheet" />
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
 <script src="https://kendo.cdn.telerik.com/2020.3.1021/js/kendo.all.min.js"></script>
+
+
+<!--PARA EL QUERY-->
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/redmond/jquery-ui.css">
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.js"></script>
+<script  src="/Javascript/autocompletado.js"></script>
 </head>
 <body>
 
@@ -39,7 +47,7 @@
     </div>
     <div class="top_menu">
       <div class="logo">BOLSA DE TRABAJO</div>
-      <ul>
+      <!--<ul>
         <li><a href="#">
           <i class="fas fa-search"></i></a></li>
         <li><a href="#">
@@ -48,7 +56,7 @@
         <li><a href="#">
           <i class="fas fa-user"></i>
           </a></li>
-      </ul>
+      </ul>-->
     </div>
   </div>
 
@@ -57,7 +65,7 @@
         <li><a href="#">
           <span class="icon"><i class="fas fa-cogs"></i></span>
           <span class="title">Categoria</span></a></li>
-        <li><a href="#">
+        <li><a href="/secciones/curso/cursos.html">
           <span class="icon"><i class="fas fa-tv"></i></span>
           <span class="title">Cursos</span>
           </a></li>
@@ -122,12 +130,17 @@
                     </div>
                   </div>
                   <!--<input type="text" tabindex="1" id="list"> </input> -->
+
                   <div id="text paterno">
                     <label for="APaterno">A. Paterno</label>
                     <div class="col col-sm-3 col-md-3 col-lg-1">
                       <input id="APaterno" style="width:200px" data-bind="value: Entity.APaterno">
                     </div>
                   </div>
+
+                  <form id="searchform" method="get" role="search">
+                    <input id="valorGurdado" />
+                  </form>
 
                   <div id="text materno">
                     <label for="AMaterno">A. Materno</label>
