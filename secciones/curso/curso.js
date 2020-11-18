@@ -1,4 +1,52 @@
-$(function(){
+$(function() {
+  $("#cursoAutoComplete").autocomplete({
+    source: function(request, response) {
+      $.ajax({
+        url: "http://localhost:5000/api/curso",
+        dataType: "json",
+        type: "GET",
+        data: {
+          subject_name: request.term,
+        },
+        autoFocus: true,
+        minLength: 1,
+        success: function(data) {
+          response($.map(data, function(item) {
+            return {
+                label: item.nom_curso,
+                value: item.nom_curso
+            }}))
+          }
+      });
+    }
+  })
+});
+
+$(function() {
+  $("#cursoAutoCompleteClave").autocomplete({
+    source: function(request, response) {
+      $.ajax({
+        url: "http://localhost:5000/api/curso",
+        dataType: "json",
+        type: "GET",
+        data: {
+          subject_name: request.term,
+        },
+        autoFocus: true,
+        minLength: 1,
+        success: function(data) {
+          response($.map(data, function(item) {
+            return {
+                label: item.id_curso,
+                value: item.id_curso
+            }}))
+          }
+      });
+    }
+  })//
+});
+
+/*$(function(){
     $.widget( "custom.catcomplete", $.ui.autocomplete, {
       _renderMenu: function( ul, items ) {
         var that = this,
@@ -39,4 +87,4 @@ $(function(){
       },
       minlength:0
     });
-  });
+  });*/
