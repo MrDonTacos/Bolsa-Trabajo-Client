@@ -1,4 +1,4 @@
-const Url = 'http://localhost:5000/api/documento/';
+const UrlCurso = 'http://localhost:5000/api/curso/';
 
 var formulario = document.getElementById('loginCurso');
 
@@ -7,7 +7,7 @@ formulario.addEventListener('submit', function(e){
 
     var datos = new FormData(formulario);
 
-    fetch('http://localhost:5000/api/documento/',{
+    fetch(UrlCurso,{
         method: 'POST',
         //contentType:'application/json',
         headers: {
@@ -15,13 +15,13 @@ formulario.addEventListener('submit', function(e){
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            id_documento: datos.get('claveCurso'),
-            documento: datos.get('nombreCurso')
+            id_curso: datos.get('claveCurso'),
+            nom_curso: datos.get('nombreCurso')
         })
     })
     .then( res => res.json())
     .then( data => {
-        alert(data);
+        Swal.fire(data);
         console.log(data);
     });
 });
