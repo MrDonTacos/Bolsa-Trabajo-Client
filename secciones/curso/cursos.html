@@ -114,12 +114,12 @@
   <div class="main_container">
     <div class="login-page">
         <div class="form">
-          <form class="login-form">
+          <form class="login-form" id="loginCurso">
               Clave
-            <input type="text" placeholder="Ingresa la Clave" id="cursoAutoCompleteClave"/>
+            <input type="text" placeholder="Ingresa la Clave" id="cursoAutoCompleteClave" name="claveCurso"/>
             Curso
-            <input type="text" placeholder="Ingresa curso" id="cursoAutoComplete"/>
-            <button>Guardar</button>
+            <input type="text" placeholder="Ingresa curso" id="cursoAutoComplete" name="nombreCurso"/>
+            <button class="botonCurso" type="submit">Guardar</button>
           </form>
         </div>
       </div>
@@ -128,6 +128,7 @@
 </div>
 
 </body>
+<script src="/secciones/curso/POSTCurso.js"></script>
 <script src="/secciones/curso/curso.js"></script>
 <script src="/Javascript/dsKendo/helper.js"></script>
 <script src="/Javascript/Index.js"></script>
