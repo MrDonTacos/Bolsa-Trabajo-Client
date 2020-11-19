@@ -1,5 +1,5 @@
 function botonActualizar() {
-    const urlCurso2 = 'http://localhost:5000/api/curso/0001';
+    const urlCurso2 = 'http://localhost:5000/api/curso/';
     var formulario = document.getElementById('loginCurso');
 
     formulario.addEventListener('submit', function(e){
@@ -7,7 +7,7 @@ function botonActualizar() {
     
         var datos = new FormData(formulario);
     
-        fetch(urlCurso2, {
+        fetch(urlCurso2+datos.get('claveCurso'), {
             method: 'PUT',
             //contentType:'application/json',
             headers: {
@@ -15,23 +15,18 @@ function botonActualizar() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                id_curso: "0001",
-                nom_curso: "IJQWEOEJQOIJEOIQWQEW"
+                id_curso: datos.get('claveCurso'),
+                nom_curso: datos.get('nombreCurso')
             })
         })
         .then( res => res.json())
         .then( data => {
             Swal.fire(data);
             console.log(data);
+            //window.location.reload();
         });
     });
 }
-/*
-datos.get('claveCurso'),
-datos.get('nombreCurso')
-
-*/
-
 
     $('#subidacambios').click(function(){
         /*var formularios = document.getElementById('loginCurso');
