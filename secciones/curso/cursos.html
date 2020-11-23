@@ -20,7 +20,7 @@
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous">
     </script>
-<script src="Js/jQueryHelper.js"></script>
+
 <!-- <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js'></script> -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="Styles/style.css">
 <link href="styles/kendo.default-v2.min.css" rel="stylesheet" />
@@ -36,7 +36,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.js"></script>
 
 <!--QUIZAS NO SIRVEN, PERO POR SI LAS DUDAS-->
-<script src="alert/dist/sweetalert-dev.js"></script>
+
 <link rel="stylesheet" href="alert/dist/sweetalert.css">
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> <!--SRC DE LOS ALERT-->
@@ -125,7 +125,12 @@
             <input type="text" placeholder="Ingresa la Clave" id="cursoAutoCompleteClave" name="claveCurso" maxlength="4"/>
             Curso
             <input type="text" placeholder="Ingresa curso" id="cursoAutoComplete" name="nombreCurso"/>
-            <button class="btnPromt" type="submit">Guardar</button><!--hay un error aqui-->>
+            <button class="guardarBoton" onclick="botonGuardar()" type="submit">Guardar</button><!--hay un error aqui-->
+            <p></p>
+            <button class="actualizarBoton" onclick="botonActualizar()" type="submit">Actualizar</button><!--hay un error aqui-->
+            <p></p>
+            <input class="eliminarBoton" type="button" onclick="location.href='/secciones/curso/ListaCursos.html';" value="Go to Google" />
+            <!--<button class="eliminarBoton" id="botonEliminar" onclick="botonEliminar()" type="submit">Eliminar</button>--> <!--hay un error aqui-->
           </form>
         </div>
       </div>
@@ -134,6 +139,7 @@
 </div>
 
 </body>
+<script src="/secciones/curso/PUTCurso.js"></script>
 <script src="/utils/styleAlert_Alert.js"></script>
 <script src="/secciones/curso/POSTCurso.js"></script>
 <script src="/secciones/curso/curso.js"></script>
