@@ -1,6 +1,7 @@
 
 function botonGuardar() {
-    const UrlCurso = 'http://localhost:5000/api/curso/';
+    //const UrlCurso = 'http://localhost:5000/api/curso/';
+    let url = `${baseurl}/curso`;
 
 var formulario = document.getElementById('loginCurso');
 
@@ -9,7 +10,7 @@ var formulario = document.getElementById('loginCurso');
     
         var datos = new FormData(formulario);
     
-        fetch(UrlCurso,{
+        fetch(url,{
             method: 'POST',
             //contentType:'application/json',
             headers: {

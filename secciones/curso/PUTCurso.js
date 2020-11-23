@@ -1,13 +1,15 @@
 function botonActualizar() {
-    const urlCurso2 = 'http://localhost:5000/api/curso/';
+    //const urlCurso2 = 'http://localhost:5000/api/curso/';
+    let url = `${baseurl}/curso/`;
     var formulario = document.getElementById('loginCurso');
+    //const UrlCurso = 'http://localhost:5000/api/curso/';
 
     formulario.addEventListener('submit', function(e){
         e.preventDefault();
     
         var datos = new FormData(formulario);
-    
-        fetch(urlCurso2+datos.get('claveCurso'), {
+    console.log("porobando con url es "+url+datos.get('claveCurso'));
+        fetch(url+datos.get('claveCurso'), {
             method: 'PUT',
             //contentType:'application/json',
             headers: {
@@ -28,12 +30,15 @@ function botonActualizar() {
     });
 }
 
-    $('#subidacambios').click(function(){
-        /*var formularios = document.getElementById('loginCurso');
-        var dato = new FormData(formularios);
-    
-    let data = {id_curso: "0001",
-    nom_curso: "I0U1OIJOJ"};*/
+/*$('#subidacambios').click(function(){
+    /*var formularios = document.getElementById('loginCurso');
+    var dato = new FormData(formularios);
+
+let data = {id_curso: "0001",
+nom_curso: "I0U1OIJOJ"};*/
+
+/*
+
     let data = {id_curso: "0001",
     nom_curso: "I0U1OIJOJ"};
     $.ajax({
@@ -48,7 +53,7 @@ function botonActualizar() {
     }).always(function (msg) {
         console.log('ALWAYS');
     });
-    });
+    });*/
 
 
 /*
