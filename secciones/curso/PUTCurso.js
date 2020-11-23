@@ -8,7 +8,7 @@ function botonActualizar() {
         e.preventDefault();
     
         var datos = new FormData(formulario);
-    console.log("porobando con url es "+url+datos.get('claveCurso'));
+
         fetch(url+datos.get('claveCurso'), {
             method: 'PUT',
             //contentType:'application/json',
