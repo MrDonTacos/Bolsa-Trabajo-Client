@@ -35,7 +35,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
 
-s
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.debug.js"></script>
@@ -78,83 +78,64 @@ s
       <br />
             <img class="crazyFrog"></img>
         </div>-->
+        <table>
+            <tr>
+             <th>name1</th>
+             <th>age</th>
+             <th>birthdate</th>
+             
+            </tr>
+            <tbody id="myTable">
+
+            </tbody>
+        </table>
+        <script>
+const api_url = 
+	"http://localhost:5000/api/curso"; 
+
+// Defining async function 
+async function getapi(url) { 
+	
+	// Storing response 
+	const response = await fetch(url); 
+	
+	// Storing data in form of JSON 
+	var data = await response.json(); 
+	console.log("wdkqwkoqkwd"+data); 
+
+	buildTable(data); 
+} 
+getapi(api_url); 
+
+            console.log("wsdewd");
+            var myArray = [
+	    {'name':'Michael', 'age':'30', 'birthdate':'11/10/1989'},
+	    {'name':'Mila', 'age':'32', 'birthdate':'10/1/1989'},
+	    {'name':'Paul', 'age':'29', 'birthdate':'10/14/1990'},
+	    {'name':'Dennis', 'age':'25', 'birthdate':'11/29/1993'},
+	    {'name':'Tim', 'age':'27', 'birthdate':'3/12/1991'},
+	    {'name':'Erik', 'age':'24', 'birthdate':'10/31/1995'},
+	];
+	
+    buildTable(myArray);
     
-    <table id="basic-table" class="table table-striped">
-        <thead>
-        <tr>
-            <th>No Control</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>No Seguro Social</th>
-            <th>Telefono</th>
-            <th>Fecha Ingreso</th>
-            <th>Perfil</th>
-            <th>Experiencia</th>
-            <th>Escolaridad</th>
-            <th>Curp</th>
-            <th>Documento 1</th>
-            <th>Documento 2</th>
-            <th>Estatus</th>
-            <th>Observaciones</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td>Donna</td>
-            <td>Moore</td>
-            <td>dmoore0@furl.net</td>
-            <td>China</td>
-            <td>211.56.242.221</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Janice</td>
-            <td>Henry</td>
-            <td>jhenry1@theatlantic.com</td>
-            <td>Ukraine</td>
-            <td>38.36.7.199</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Ruth</td>
-            <td>Wells</td>
-            <td>rwells2@constantcontact.com</td>
-            <td>Trinidad and Tobago</td>
-            <td>19.162.133.184</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Jason</td>
-            <td>Ray</td>
-            <td>jray3@psu.edu</td>
-            <td>Brazil</td>
-            <td>10.68.11.42</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Jane</td>
-            <td>Stephens</td>
-            <td>jstephens4@go.com</td>
-            <td>United States</td>
-            <td>47.32.129.71</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Adam</td>
-            <td>Nichols</td>
-            <td>anichols5@com.com</td>
-            <td>Canada</td>
-            <td>18.186.38.37</td>
-        </tr>
-        </tbody>
-    </table>
-    
-    
-    
-    <div>
-    
-    </div>
+            function buildTable(data){
+                var table = document.getElementById('myTable')
+
+                for(var i =0; i<data.length; i++) {
+                    console.log("la data es"+data[i]);
+                    var row =`<tr>
+                        <td>${data[i].id_curso}</td>
+                        <td>${data[i].nom_curso}</td>
+                        <td>${data[i].birthdate}</td>
+                        </tr> `
+                    table.innerHTML+=row
+                }
+            } 
+        </script>
+
+
+
     </body>
     <script src="/pdf/exportando.js"></script>
 <script src="/secciones/ListaCurso/GETListaCursos.js"></script>

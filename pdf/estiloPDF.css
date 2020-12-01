@@ -4,3 +4,10 @@
    td{
     border:1px solid black
   }
+  .tabla{
+
+      width: 100%;
+      overflow-x: auto;
+      /*white-space: nowrap;*/
+
+  }
