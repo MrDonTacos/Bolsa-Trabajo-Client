@@ -44,3 +44,22 @@ var dataSourcePerfiles = new kendo.data.DataSource({
         alert(e.xhr.responseText + " error");
     }
 });
+
+createPerfil = (Entity, status) => {
+    if (status == true) {
+        return $.ajax({
+            type: 'PUT',
+            url: `${baseurl}/perfil/${Entity.id_perfil}`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+    else{
+        return $.ajax({
+            type: 'POST',
+            url: `${baseurl}/perfil`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+}

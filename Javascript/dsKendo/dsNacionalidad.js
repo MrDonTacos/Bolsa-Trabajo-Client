@@ -44,3 +44,22 @@ var dataSourceNacionalidad = new kendo.data.DataSource({
         alert(e.xhr.responseText + " error");
     }
 });
+
+createNacionalidad = (Entity, status) => {
+    if (status == true) {
+        return $.ajax({
+            type: 'PUT',
+            url: `${baseurl}/nacionalidad/${Entity.id_nacionalidad}`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+    else{
+        return $.ajax({
+            type: 'POST',
+            url: `${baseurl}/nacionalidad`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+}

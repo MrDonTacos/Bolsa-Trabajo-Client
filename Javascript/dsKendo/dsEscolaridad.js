@@ -44,3 +44,22 @@ var dataSourceEscolaridad = new kendo.data.DataSource({
         alert(e.xhr.responseText + " error");
     }
 });
+
+createEscolaridad = (Entity, status) => {
+    if (status == true) {
+        return $.ajax({
+            type: 'PUT',
+            url: `${baseurl}/escolaridad/${Entity.id_escolaridad}`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+    else{
+        return $.ajax({
+            type: 'POST',
+            url: `${baseurl}/escolaridad`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+}

@@ -44,3 +44,22 @@ var dataSourceEmpleadoDepartamento = new kendo.data.DataSource({
         alert(e.xhr.responseText + " error");
     }
 });
+
+createDepartamento = (Entity, status) => {
+    if (status == true) {
+        return $.ajax({
+            type: 'PUT',
+            url: `${baseurl}/departamento/${Entity.id_departamento}`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+    else{
+        return $.ajax({
+            type: 'POST',
+            url: `${baseurl}/departamento`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+}

@@ -27,7 +27,7 @@ var dataSourceMateria = new kendo.data.DataSource({
         model: {
             id: "id",
             fields: {
-                id: { type: "number", title: 'Clave', format: "{0:n0}", validation: { required: true }, defaultValue: 0, editable: true },
+                id: { type: "number" },
                 materianombre: {
                     type: "string", title: 'Nombre',
                     validation: {
@@ -44,3 +44,22 @@ var dataSourceMateria = new kendo.data.DataSource({
         alert(e.xhr.responseText + " error");
     }
 });
+
+createMateria = (Entity, status) => {
+    if (status == true) {
+        return $.ajax({
+            type: 'PUT',
+            url: `${baseurl}/materia/${Entity.id}`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+    else{
+        return $.ajax({
+            type: 'POST',
+            url: `${baseurl}/materia`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+}

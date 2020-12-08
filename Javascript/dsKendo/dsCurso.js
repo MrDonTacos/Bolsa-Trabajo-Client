@@ -45,4 +45,21 @@ var dataSourceCurso = new kendo.data.DataSource({
     }
 });
 
-console.log("HOLA MUNDO");
+createCurso = (Entity, status) => {
+    if (status == true) {
+        return $.ajax({
+            type: 'PUT',
+            url: `${baseurl}/curso/${Entity.id_documento}`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+    else{
+        return $.ajax({
+            type: 'POST',
+            url: `${baseurl}/curso`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+}

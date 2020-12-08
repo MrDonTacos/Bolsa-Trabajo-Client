@@ -44,3 +44,22 @@ var dataSourceEmpleadoDocumento = new kendo.data.DataSource({
         alert(e.xhr.responseText + " error");
     }
 });
+
+createDocumento = (Entity, status) => {
+    if (status == true) {
+        return $.ajax({
+            type: 'PUT',
+            url: `${baseurl}/documento/${Entity.id_documento}`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+    else{
+        return $.ajax({
+            type: 'POST',
+            url: `${baseurl}/documento`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+}

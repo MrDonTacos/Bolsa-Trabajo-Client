@@ -26,5 +26,15 @@ $(function() {
         }
     })
 
+    $("#BT_Save").click( e => {
+        e.preventDefault();
+        createDepartamento(viewModel.get("Entity"), viewModel.get("Entity.isUpdate")).then(data => {
+            alert("Registrado con Exito")
+        }).fail(err => {
+            alert("No se ha podido completar el guardado " + err.message)
+        })
+    })
+
+
     kendo.bind($("#viewModelDepartamento"), viewModel)
 })

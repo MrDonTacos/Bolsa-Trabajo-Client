@@ -44,3 +44,22 @@ var dataSourceEmpleadoPuesto = new kendo.data.DataSource({
         alert(e.xhr.responseText + " error");
     }
 });
+
+createPuesto = (Entity, status) => {
+    if (status == true) {
+        return $.ajax({
+            type: 'PUT',
+            url: `${path}/puesto/${Entity.id_puesto}`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+    else{
+        return $.ajax({
+            type: 'POST',
+            url: `${baseurl}/puesto`,
+            data: JSON.stringify(Entity),
+            contentType: 'application/json',
+        });
+    }
+}
