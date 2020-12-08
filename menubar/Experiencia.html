@@ -1,0 +1,21 @@
+
+<div class="main_container" id="viewModelExperiencia">
+    <div class="form" style="padding-top: 5%">
+        <form class="login-form" id="loginCurso"><!--quite NAME que tenia el nombre de COSAS-->
+            <div class="form-group row col-sm-12">
+                    <label for="claveExeperiencia">Clave</label>
+                    <input type="text" data-bind="value: Entity.id_curso" placeholder="Ingresa la Clave" id="experienciaAutoCompleteClave" name="claveExperiencia" maxlength="4"/>
+            </div>
+            <div class="form-group row col-sm-12">
+                <label for="nombreExperiencia">Experiencia</label>    
+                <input type="text" data-bind="value: Entity.experiencia" placeholder="Ingresa Experiencia" id="cursoAutoCompleteNombre" name="nombreExperiencia"/>
+            </div>
+            <button class="guardarBoton" id="BT_Save">Guardar</button><!--hay un error aqui-->
+            <button class="actualizarBoton" >Eliminar</button><!--hay un error aqui-->
+        <!--<button class="eliminarBoton" id="botonEliminar" onclick="botonEliminar()" type="submit">Eliminar</button>--> <!--hay un error aqui-->
+        </form>
+    </div>
+</div>
+
+<script src="../Javascript/dsKendo/dsCurso.js"></script>
+<script src="../Javascript/Curso.js"></script>

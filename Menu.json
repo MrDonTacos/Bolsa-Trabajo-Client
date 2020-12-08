@@ -54,6 +54,11 @@
             "menuName": "Bolsa de Trabajo Muerta",
             "id": "BT_BolsaTMuerta",
             "menuIcon": "fa fa-folder"
+        },
+        {
+            "menuName": "Experiencia",
+            "id": "BT_Experiencia",
+            "menuIcon": "fa fa-address-card"
         }
     ]
 }

@@ -76,6 +76,11 @@ $("#CC_Curso3").kendoComboBox({
    dataTextField: "nom_curso",
    dataValueField: "id_curso"
 })
+$("#EExperiencia").kendoComboBox({
+    dataSource: dataSourceExperiencia,
+   dataTextField: "id_experiencia",
+   dataValueField: "experiencia"
+})
 });
 
 

@@ -67,6 +67,9 @@ $(document).ready(function () {
     $("#BT_BolsaTActiva").click(e => {
         $("#menu").load("../menubar/mantenimiento_empleado.html")
     })
+    $("#BT_Experiencia").click(function() {
+        $("#menu").load("../menubar/Experiencia.html")
+    })
     // $("#BT_BolsaTMuerta").unbind();
     // $("#BT_BolsaTMuerta").click(e => {
     //     $("#menu").load("")
