@@ -1,28 +1,30 @@
 $(function() {
     let viewModel = kendo.observable({
         Entity: {
-            id_curso: null,
-            nom_curso: null
+            id_departamento: null,
+            nom_departamento: null,
+            isUpdate: false,
         }
-    })
-
-    $("#DepartamentoNombre").kendoAutoComplete({
-        autoBind: false,
-        dataTextField: "id_depto",
-        dataValueField: "nom_depto",
-        dataSource: dataSourceEmpleadoDepartamento,
-        suggest: true,
-        minLength: 3,
     })
 
     $("#DepartamentoClave").kendoAutoComplete({
         autoBind: false,
-        dataTextField: "id_depto",
-        dataValueField: "id_depto",
+        valuePrimitive: true,
+        dataTextField: "id_departamento",
+        dataValueField: "nom_departamento",
         dataSource: dataSourceEmpleadoDepartamento,
         suggest: true,
-        minLength: 3,
+        minLength: 2,
+        change: function(e) {
+            let value = this.dataItem();
+            console.log(value);
+            if(value)
+            {
+                viewModel.set("Entity.nom_departamento", value.nom_departamento)
+                viewModel.set("Entity.isUpdate", true)
+            }
+        }
     })
 
-    kendo.bind($("#viewModelCurso"), viewModel)
+    kendo.bind($("#viewModelDepartamento"), viewModel)
 })

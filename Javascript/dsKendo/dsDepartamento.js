@@ -25,10 +25,10 @@ var dataSourceEmpleadoDepartamento = new kendo.data.DataSource({
             return data.length;
         },
         model: {
-            id: "id_depto",
+            id: "id_departamento",
             fields: {
-                id_depto: { type: "number", title: 'Clave', format: "{0:n0}", validation: { required: true }, defaultValue: 0, editable: true },
-                nom_depto: {
+                id_departamento: { type: "string"},
+                nom_departamento: {
                     type: "string", title: 'Nombre',
                     validation: {
                         required: true,

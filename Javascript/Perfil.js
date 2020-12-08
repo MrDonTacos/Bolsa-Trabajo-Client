@@ -1,28 +1,30 @@
 $(function() {
     let viewModel = kendo.observable({
         Entity: {
-            id_curso: null,
-            nom_curso: null
+            id_perfil: null,
+            perfil: null,
+            isUpdate: false,
         }
-    })
-
-    $("#PerfilNombre").kendoAutoComplete({
-        autoBind: false,
-        dataTextField: "id_perfil",
-        dataValueField: "perfil",
-        dataSource: dataSourcePerfiles,
-        suggest: true,
-        minLength: 3,
     })
 
     $("#PerfilClave").kendoAutoComplete({
         autoBind: false,
         dataTextField: "id_perfil",
-        dataValueField: "id_perfil",
+        dataValueField: "perfil",
+        valuePrimitive: true,
         dataSource: dataSourcePerfiles,
         suggest: true,
         minLength: 3,
+        change: function(e) {
+            let value = this.dataItem();
+            console.log(value);
+            if(value)
+            {
+                viewModel.set("Entity.perfil", value.perfil)
+                viewModel.set("Entity.isUpdate", true)
+            }
+        }
     })
 
-    kendo.bind($("#viewModelCurso"), viewModel)
+    kendo.bind($("#viewModelPerfil"), viewModel)
 })

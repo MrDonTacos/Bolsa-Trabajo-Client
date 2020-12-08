@@ -1,15 +1,22 @@
 
 <div class="main_container">
     <div class="form" style="padding-top: 5%">
-      <form class="login-form" id="loginCurso"><!--quite NAME que tenia el nombre de COSAS-->
-          Clave
-        <input type="text" placeholder="Ingresa la Clave" id="MateriaClave" name="claveCurso" maxlength="4"/>
-        Materia
-        <input type="text" placeholder="Ingresa Materia" id="MateriaNombre" name="nombreCurso"/>
-        <button class="guardarBoton" onclick="">Guardar</button><!--hay un error aqui-->
-        <button class="actualizarBoton" onclick="">Actualizar</button><!--hay un error aqui-->
-        <input class="eliminarBoton" type="button" />
+        <form class="login-form" id="viewModelMateria"><!--quite NAME que tenia el nombre de COSAS-->
+            <div class="form-group row col-sm-12">
+                <label for="MateriaClave">Clave</label>
+                <input type="text" data-bind="value: Entity.id" placeholder="Ingresa la Clave" id="MateriaClave" name="MateriaClave" maxlength="4"/>
+            </div>
+            <div class="form-group row col-sm-12">
+                <label for="MateriaNombre">Materia</label>    
+                <input type="text" data-bind="value: Entity.materianombre" placeholder="Ingresa Materia" id="MateriaNombre" name="MateriaNombre"/>
+            </div>
+            <button class="guardarBoton" onclick="">Guardar</button><!--hay un error aqui-->
+            <button class="actualizarBoton" onclick="">Actualizar</button><!--hay un error aqui-->
+            <input class="eliminarBoton" type="button" />
         <!--<button class="eliminarBoton" id="botonEliminar" onclick="botonEliminar()" type="submit">Eliminar</button>--> <!--hay un error aqui-->
       </form>
     </div>
 </div>
+
+<script src="../Javascript/dsKendo/dsMateria.js"></script>
+<script src="../Javascript/Materia.js"></script>

@@ -41,11 +41,6 @@
             "menuIcon": "fa fa-address-card"
         },
         {
-            "menuName": "Carreras",
-            "id": "BT_Carreras",
-            "menuIcon": "fa fa-industry"
-        },
-        {
             "menuName": "Bolsa de Trabajo",
             "id": "BT_BolsaTrabajo",
             "menuIcon": "fa fa-wpforms"

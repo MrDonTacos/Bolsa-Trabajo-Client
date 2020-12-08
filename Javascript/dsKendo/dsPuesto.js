@@ -27,7 +27,7 @@ var dataSourceEmpleadoPuesto = new kendo.data.DataSource({
         model: {
             id: "id_puesto",
             fields: {
-                id_puesto: { type: "number", title: 'Clave', format: "{0:n0}", validation: { required: true }, defaultValue: 0, editable: true },
+                id_puesto: { type: "string"},
                 nom_puesto: {
                     type: "string", title: 'Nombre',
                     validation: {

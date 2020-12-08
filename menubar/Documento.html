@@ -1,11 +1,15 @@
 
 <div class="main_container">
     <div class="form" style="padding-top: 5%">
-      <form class="login-form" id="loginCurso"><!--quite NAME que tenia el nombre de COSAS-->
-          Clave
-        <input type="text" placeholder="Ingresa la Clave" id="DocumentoClave" name="claveCurso" maxlength="4"/>
-        Documento
-        <input type="text" placeholder="Ingresa Documento" id="DocumentoNombre" name="nombreCurso"/>
+        <form class="login-form" id="viewModelDocumento"><!--quite NAME que tenia el nombre de COSAS-->
+            <div class="form-group row col-sm-12">
+                <label for="DocumentoClave">Clave</label>
+                <input type="text" data-bind="value: Entity.id_documento" placeholder="Ingresa la Clave" id="DocumentoClave" name="DocumentoClave" maxlength="4"/>
+            </div>
+            <div class="form-group row col-sm-12">
+                <label for="DocumentoNombre">Documento</label>    
+                <input type="text" data-bind="value: Entity.documento" placeholder="Ingresa Documento" id="DocumentoNombre" name="DocumentoNombre"/>
+            </div>
         <button class="guardarBoton" onclick="">Guardar</button><!--hay un error aqui-->
         <button class="actualizarBoton" onclick="">Actualizar</button><!--hay un error aqui-->
         <input class="eliminarBoton" type="button" />
@@ -13,3 +17,6 @@
       </form>
     </div>
 </div>
+
+<script src="../Javascript/dsKendo/dsDocumento.js"></script>
+<script src="../Javascript/Documento.js"></script>
