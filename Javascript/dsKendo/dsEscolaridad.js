@@ -27,7 +27,7 @@ var dataSourceEscolaridad = new kendo.data.DataSource({
         model: {
             id: "id_escolaridad",
             fields: {
-                id_escolaridad: { type: "number", title: 'Clave', format: "{0:n0}", validation: { required: true }, defaultValue: 0, editable: true },
+                id_escolaridad: { type: "string"},
                 escolaridad: {
                     type: "string", title: 'Nombre',
                     validation: {
