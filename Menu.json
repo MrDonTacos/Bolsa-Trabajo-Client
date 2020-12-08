@@ -1,0 +1,64 @@
+{
+    "menu":[
+        {
+            "menuName": "Curso",
+            "id": "BT_Curso",
+            "menuIcon": "fa fa-address-card"
+        },
+        {
+            "menuName": "Documento",
+            "id": "BT_Documento",
+            "menuIcon": "fa fa-file-text"
+        },
+        {
+            "menuName": "Escolaridad",
+            "id": "BT_Escolaridad",
+            "menuIcon": "fa fa-university"
+        },
+        {
+            "menuName": "Departamento",
+            "id": "BT_Departamento",
+            "menuIcon": "fa fa-archive"
+        },
+        {
+            "menuName": "Materia",
+            "id": "BT_Materia",
+            "menuIcon": "fa fa-book"
+        },
+        {
+            "menuName": "Nacionalidad",
+            "id": "BT_Nacionalidad",
+            "menuIcon": "fa fa-flag"
+        },
+        {
+            "menuName": "Perfil",
+            "id": "BT_Perfil",
+            "menuIcon": "fa fa-user-circle"
+        },
+        {
+            "menuName": "Puesto",
+            "id": "BT_Puesto",
+            "menuIcon": "fa fa-address-card"
+        },
+        {
+            "menuName": "Carreras",
+            "id": "BT_Carreras",
+            "menuIcon": "fa fa-industry"
+        },
+        {
+            "menuName": "Bolsa de Trabajo",
+            "id": "BT_BolsaTrabajo",
+            "menuIcon": "fa fa-wpforms"
+        },
+        {
+            "menuName": "Bolsa de Trabajo Activa",
+            "id": "BT_BolsaTActiva",
+            "menuIcon": "fa fa-folder-open-o"
+        },
+        {
+            "menuName": "Bolsa de Trabajo Muerta",
+            "id": "BT_BolsaTMuerta",
+            "menuIcon": "fa fa-folder"
+        }
+    ]
+}

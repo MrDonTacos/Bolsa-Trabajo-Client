@@ -1,44 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-	<meta charset="UTF-8">
-	<title>Inicio</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$(".hamburger").click(function(){
-			   $(".wrapper").toggleClass("collapse");
-			});
-		});
-  </script>
-  <script
-	    src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous">
-    </script>
-<script src="Js/jQueryHelper.js"></script>
-<!-- <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js'></script> -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="Styles/style.css">
-<link href="styles/kendo.default-v2.min.css" rel="stylesheet" />
-<link href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.common.min.css" rel="stylesheet" />
-<link href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.default.min.css" rel="stylesheet" />
-<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-<script src="https://kendo.cdn.telerik.com/2020.3.1021/js/kendo.all.min.js"></script>
-
-
-<!--PARA EL QUERY-->
-<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/redmond/jquery-ui.css">
-
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.js"></script>
-<script  src="/Javascript/autocompletado.js"></script>
-</head>
-<body>
-
 <div class="wrapper">
+<!-- 
   <div class="top_navbar">
     <div class="hamburger">
        <div class="one"></div>
@@ -59,61 +20,9 @@
       </ul>
     </div>
   </div>
-
-  <div class="sidebar">
-      <ul>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-cogs"></i></span>
-          <span class="title">Categoria</span></a></li>
-        <li><a href="/secciones/curso/cursos.html">
-          <span class="icon"><i class="fas fa-tv"></i></span>
-          <span class="title">Cursos</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-building"></i></span>
-          <span class="title">Departamentos</span>
-          </a></li>
-        <li><a href="#" class="active">
-          <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
-          <span class="title">Empleado Curso</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-id-card"></i></span>
-          <span class="title">Empleado Documento</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-id-card-alt"></i></span>
-          <span class="title">Escolaridad</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-briefcase"></i></span>
-          <span class="title">Experiencia</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="far fa-clock"></i></span>
-          <span class="title">Horario</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-male"></i></span>
-          <span class="title">Perfil</span>
-          </a></li>
-        <li><a href="#">
-          <span class="icon"><i class="fas fa-users"></i></span>
-          <span class="title">Puesto</span>
-          </a></li>
-        <li><a href="/menubar/mantenimiento_empleado.html">
-          <span class="icon"><i class="fas fa-folder-open"></i></span>
-          <span class="title">Mantenimiento de Empleado</span>
-          </a></li>
-        <li><a href="/menubar/menu.html">
-          <span class="icon"><i class="fas fa-folder-open"></i></span>
-          <span class="title">Mantenimiento Bolsa</span>
-        </a></li>
-    </ul>
-  </div>
-  
+   -->
   <div class="main_container">
-    <div style="padding-left: 5%; padding-right: 5%;" class="col col-sm-12 col-md-12 col-lg-12 container-fluid">    
+    <div style="padding-top: 5%;" class="col col-sm-12 col-md-12 col-lg-12 container-fluid">    
       <div class="panel">
           <div class="panel-heading" style="text-align: center;">
             <h4 class="panel-title" style="font-weight:100">Instituto Tecnológico de Mexicali</h4>
@@ -275,7 +184,8 @@
                     <div class="col col-sm-3 col-md-3 col-lg-3">
                       <input id="CC_Curso2" style="width:200px" data-bind="value: Entity.Curso2">
                     </div>
-                  </div>
+                  </div>        <!--<button class="eliminarBoton" id="botonEliminar" onclick="botonEliminar()" type="submit">Eliminar</button>--> <!--hay un error aqui-->
+
 
                   <div id="text documento3">
                     <label for="CC_Curso3">Curso 3</label>
@@ -304,20 +214,18 @@
           </div>
       </div>
   </div>
-  </div>
 </div>
-
 </body>
-<script src="/Javascript/dsKendo/dsCurso.js"></script>
-<script src="/Javascript/dsKendo/dsDepartamento.js"></script>
-<script src="/Javascript/dsKendo/dsEmpleado.js"></script>
-<script src="/Javascript/dsKendo/dsEmpleadoCurso.js"></script>
-<script src="/Javascript/dsKendo/dsEscolaridad.js"></script>
-<script src="/Javascript/dsKendo/dsMateria.js"></script>
-<script src="/Javascript/dsKendo/dsPuesto.js"></script>
-<script src="/Javascript/dsKendo/dsDocumento.js"></script>
-<script src="/Javascript/dsKendo/dsNacionalidad.js"></script>
-<script src="/Javascript/dsKendo/dsPerfil.js"></script>
-<script src="/Javascript/dsKendo/helper.js"></script>
-<script src="/Javascript/Index.js"></script>
+<script src="../Javascript/dsKendo/dsCurso.js"></script>
+<script src="../Javascript/dsKendo/dsDepartamento.js"></script>
+<script src="../Javascript/dsKendo/dsEmpleado.js"></script>
+<script src="../Javascript/dsKendo/dsEmpleadoCurso.js"></script>
+<script src="../Javascript/dsKendo/dsEscolaridad.js"></script>
+<script src="../Javascript/dsKendo/dsMateria.js"></script>
+<script src="../Javascript/dsKendo/dsPuesto.js"></script>
+<script src="../Javascript/dsKendo/dsDocumento.js"></script>
+<script src="../Javascript/dsKendo/dsNacionalidad.js"></script>
+<script src="../Javascript/dsKendo/dsPerfil.js"></script>
+<script src="../Javascript/dsKendo/helper.js"></script>
+<script src="../Javascript/Index.js"></script>
 </html>

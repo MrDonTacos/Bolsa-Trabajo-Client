@@ -27,8 +27,8 @@ var dataSourceMateria = new kendo.data.DataSource({
         model: {
             id: "id",
             fields: {
-                id_curso: { type: "number", title: 'Clave', format: "{0:n0}", validation: { required: true }, defaultValue: 0, editable: true },
-                nom_curso: {
+                id: { type: "number", title: 'Clave', format: "{0:n0}", validation: { required: true }, defaultValue: 0, editable: true },
+                materianombre: {
                     type: "string", title: 'Nombre',
                     validation: {
                         required: true,
